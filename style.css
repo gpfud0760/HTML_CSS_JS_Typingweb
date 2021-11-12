@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    background-color: darkslateblue;
+}
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center; /*아이콘 폰트는 CSS의 텍스트와 속성을 그대로 적용할 수 있다. 그래서 center 적용 가능한 것.*/
+}
+.material-icons {
+    font-size: 10rem;
+}
+.lg-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.sm-text {
+    font-size: 1.5rem;
+}
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+}
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right:-10px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
+#dynamic.active::after {
+    display: none;
+}
